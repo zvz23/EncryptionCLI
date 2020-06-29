@@ -13,8 +13,8 @@ public class Main {
 
     private static String output;
     public static void main(String[] args) throws IOException {
-        var mainArgs = new MainArgs();
-        var encryption = new Encryption();
+        MainArgs mainArgs = new MainArgs();
+        Encryption encryption = new Encryption();
         JCommander.newBuilder()
                 .addObject(mainArgs)
                 .build()
@@ -33,7 +33,7 @@ public class Main {
 
     private static void decideOutput(String tempData, MainArgs args){
         if(args.isHasOut()){
-            var manager = new FileManager(args.getOutPath());
+            FileManager manager = new FileManager(args.getOutPath());
             manager.writeDataTo(tempData, false);
             System.out.println("Data was stored at " + manager.getPath());
         }
@@ -52,7 +52,7 @@ public class Main {
         else{
             if(args.isHasFile()){
                 String location = args.getFilePathIfExists();
-                var manager = new FileManager(location);
+                FileManager manager = new FileManager(location);
                 manager.fileExists();
                 encryption.setData(manager.getDataFromFile());
             }

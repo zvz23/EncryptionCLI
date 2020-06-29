@@ -39,7 +39,7 @@ public class FileManager {
     public void writeDataTo(String data, boolean append) {
         try{
             fileExists();
-            var writer = new FileWriter(thisFile, append);
+            FileWriter writer = new FileWriter(thisFile, append);
             writer.write(data);
             writer.close();
         }catch (IOException e){
