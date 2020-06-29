@@ -36,12 +36,20 @@ public class Main {
             FileManager manager = new FileManager(args.getOutPath());
             manager.writeDataTo(tempData, false);
             System.out.println("Data was stored at " + manager.getPath());
+            operationInfo(args);
         }
         else{
-            System.out.println(tempData);
+            System.out.println("Output: " + tempData);
+            operationInfo(args);
         }
     }
 
+    private static void operationInfo(MainArgs args){
+        System.out.println("[Operation Info]");
+        System.out.println("Type: " + args.getMode() == "enc" ? "Encryption":"Decryption");
+        System.out.println("Key: " + args.getKey());
+        System.out.println("Algorithm: " + args.getAlgo().toString());
+    }
 
     private static void validateEncryptionObj(Encryption encryption, MainArgs args){
         encryption.setKey(args.getKey());
