@@ -19,7 +19,7 @@ public class Main {
                 .addObject(mainArgs)
                 .build()
                 .parse(args);
-        validateEncryptionObj(encryption, mainArgs);
+        initializeEncryptionObj(encryption, mainArgs);
         switch (mainArgs.getMode()){
             case "enc":
                 output = encryption.encrypt();
@@ -51,7 +51,7 @@ public class Main {
         System.out.println("Algorithm: " + args.getAlgo().toString());
     }
 
-    private static void validateEncryptionObj(Encryption encryption, MainArgs args){
+    private static void initializeEncryptionObj(Encryption encryption, MainArgs args){
         encryption.setKey(args.getKey());
         encryption.setAlgorithm(AlgorithmFactory.getAlgorithm(args.getAlgo()));
         if(!args.getRawData().equals("")){
