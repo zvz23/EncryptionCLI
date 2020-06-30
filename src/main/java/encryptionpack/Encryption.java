@@ -4,7 +4,7 @@ public class Encryption {
 
     private EncryptionAlgorithm algorithm;
     private String data;
-    private int key = 0;
+    private int key = 1;
 
     public Encryption(){
      this.algorithm = new ShiftAlgorithm();
