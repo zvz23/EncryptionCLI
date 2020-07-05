@@ -46,7 +46,8 @@ public class Main {
 
     private static void operationInfo(MainArgs args){
         System.out.println("[Operation Info]");
-        System.out.println("Type: " + args.getMode() == "dec" ? "Decryption" : "Encryption");
+        String tempMode = args.getMode().equals("enc") ? "Encryption" : "Decryption";
+        System.out.println("Type: " + tempMode);
         System.out.println("Key: " + args.getKey());
         System.out.println("Algorithm: " + args.getAlgo().toString());
     }
