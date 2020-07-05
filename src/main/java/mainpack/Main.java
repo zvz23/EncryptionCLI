@@ -12,9 +12,9 @@ import java.io.IOException;
 public class Main {
 
     private static String output;
+    private static final Encryption encryption = new Encryption();
     public static void main(String[] args) throws IOException {
         MainArgs mainArgs = new MainArgs();
-        Encryption encryption = new Encryption();
         JCommander.newBuilder()
                 .addObject(mainArgs)
                 .build()
@@ -46,7 +46,7 @@ public class Main {
 
     private static void operationInfo(MainArgs args){
         System.out.println("[Operation Info]");
-        System.out.println("Type: " + args.getMode() == "enc" ? "Encryption":"Decryption");
+        System.out.println("Type: " + args.getMode() == "dec" ? "Decryption" : "Encryption");
         System.out.println("Key: " + args.getKey());
         System.out.println("Algorithm: " + args.getAlgo().toString());
     }
