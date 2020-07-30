@@ -1,4 +1,7 @@
-# EncryptionCLI
+# EncryptionCLI 2.0
+
+# Whats new?
+  Added new algorithm UNISHIFT
 
 # About
 Encrypts a sequence of characters depending on the key and algorithm specified
@@ -8,7 +11,7 @@ Encrypts a sequence of characters depending on the key and algorithm specified
 
 --key   no. of steps every characater moves
 
---alg   specifiy what algorithm to use (SHIFT or UNICODE)
+--alg   specifiy what algorithm to use (SHIFT, UNICODE, UNISHIFT)
 
 --in    location of the file instead of --data
 
