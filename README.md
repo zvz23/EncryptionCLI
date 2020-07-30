@@ -22,7 +22,7 @@ Encrypts a sequence of characters depending on the key and algorithm specified
 # Run using java tool
  I. Locate the jar file at /build/libs
  
- II.Run "java -jar encrpytion-tool-1.0.jar -parameters..." in the command line
+ II.Run "java -jar encrpytion-tool-2.0.jar -parameters..." in the command line
 
 # Run using gradle
  I. Go to the root folder
