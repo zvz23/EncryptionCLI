@@ -8,6 +8,8 @@ public abstract class AlgorithmFactory {
                 return new ShiftAlgorithm();
             case UNICODE:
                 return new UnicodeAlgorithm();
+            case UNISHIFT:
+                return new UniShiftAlgorithm();
             default:
                 return null;
         }
