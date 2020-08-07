@@ -13,6 +13,8 @@ argparsepack/AlgorithmValidate.java
  argparsepack.AlgorithmValidate
 encryptionpack/EncryptionAlgorithm.java
  encryptionpack.EncryptionAlgorithm
+encryptionpack/UniShiftAlgorithm.java
+ encryptionpack.UniShiftAlgorithm
 mainpack/Main.java
  mainpack.Main
 encryptionpack/ShiftAlgorithm.java

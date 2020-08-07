@@ -18,8 +18,6 @@ public class Encryption {
         this.algorithm = algorithm;
     }
     public void setKey(int newKey){
-        if(key < 0)
-            throw new IllegalArgumentException("Invalid key must be greater than zero");
         this.key = newKey;
     }
     public void setData(String newData){
